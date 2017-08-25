@@ -2,6 +2,12 @@
 
 This tutorial requires interacting with a number of tools and services which require a specific set of command line utilities to be installed on the machine used to follow this tutorial.
 
+Read up on CloudFlare's PKI toolkit (__cfssl__ and __cfssljson__ below) here:
+
+	https://blog.cloudflare.com/introducing-cfssl/
+
+[Well worth a read for some insight into why managing browser certs is such a pain. Doesn't cover CRLs.]
+
 Install the following client tools and ensure they are in your path:
 
 * [cfssl](https://github.com/cloudflare/cfssl) 1.2.0
