@@ -13,7 +13,7 @@ This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) t
 The Nomad on Kubernetes repository holds a collection of configuration files and scripts that must be downloaded onto the machine used to follow this tutorial. Use the `git` command to clone this repository:
 
 ```
-git clone https://github.com/kelseyhightower/nomad-on-kubernetes.git
+git clone https://github.com/mramshaw/nomad-on-kubernetes.git
 ```
 
 The remainder of this tutorial assumes your working directory is the root of the cloned repository. Move into the `nomad-on-kubernetes` directory:
