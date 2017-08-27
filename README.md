@@ -40,3 +40,8 @@ Run the `clean-up` bash script to remove all compute resources created by this t
 ```
 bash clean-up
 ```
+
+## TODO
+
+- [ ] Verify with the latest version of Go (__1.8.4__ at time of writing)
+- [ ] Verify with the latest version of Vault (__0.8.1__ at time of writing)
