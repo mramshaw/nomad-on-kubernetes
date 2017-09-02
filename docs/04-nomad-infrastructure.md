@@ -1,6 +1,6 @@
 # Provision The Nomad Infrastructure
 
-The Nomad control plane will be configured for remote access through a set of internal and external load balancers. Each component will be secured with TLS certificates and/or encryption tokens. In this section the necessary infrastructure to generate TLS certificates and encryption tokens will be setup. The resulting TLS certificates and encryption tokens will be stored in the `nomad` Kubernetes cluster as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and made available to the Nomad control plane during deployment.
+The Nomad control plane will be configured for remote access through a set of internal and external load balancers. Each component will be secured with TLS certificates and/or encryption tokens. In this section the necessary infrastructure to generate TLS certificates and encryption tokens will be set up. The resulting TLS certificates and encryption tokens will be stored in the `nomad` Kubernetes cluster as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and made available to the Nomad control plane during deployment.
 
 ## Create the Kubernetes Services
 
@@ -204,4 +204,4 @@ nomad                 Opaque                                3         13s
 vault                 Opaque                                3         18s
 ```
 
-Next: [Provision The Consul Cluster](05-consul.md)
+Next: [Provision the Consul Cluster](05-consul.md)

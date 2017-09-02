@@ -6,11 +6,11 @@
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
-      "O": "Kubernetes",
+      "C":  "CA",
+      "L":  "Vancouver",
+      "O":  "Kubernetes",
       "OU": "Nomad",
-      "ST": "Oregon"
+      "ST": "British Columbia"
     }
   ]
 }
