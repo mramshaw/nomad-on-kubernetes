@@ -2,11 +2,15 @@
 
 This tutorial requires interacting with a number of tools and services which require a specific set of command line utilities to be installed on the machine used to follow this tutorial.
 
+## cfssl / cfssljson
+
 Read up on CloudFlare's PKI toolkit (__cfssl__ and __cfssljson__ below) here:
 
 	https://blog.cloudflare.com/introducing-cfssl/
 
 [Well worth a read for some insight into why managing browser certs is such a pain. Doesn't cover CRLs.]
+
+## Tools
 
 Install the following client tools and ensure they are in your path:
 
@@ -18,6 +22,8 @@ Install the following client tools and ensure they are in your path:
 * [gcloud](https://cloud.google.com/sdk/) 166.0.0
 * [kubectl](https://cloud.google.com/sdk/docs/components) 1.7.3
 * [jq](https://stedolan.github.io/jq/download/) 1.5
+
+## gcloud components / kubectl
 
 Upgrading to the latest version of gcloud components:
 
@@ -45,6 +51,8 @@ Install kubectl using gcloud (we need __173.0.0__):
 
 [The 166.0.0 gcloud components only offer kubectl 172.0.0 - for this work the specific version of kubectl is more important.]
 
+## gcloud region, zone and project
+
 Verify the current gcloud settings:
 
 	gcloud config list
@@ -62,4 +70,4 @@ Set project as default:
 
 	gcloud config set project k8snomad
 
-Next: [Provision The Kubernetes Infrastructure](03-kubernetes-infrastructure.md)
+Next: [Provision the Kubernetes Infrastructure](03-kubernetes-infrastructure.md)
