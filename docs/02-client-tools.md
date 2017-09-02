@@ -45,4 +45,21 @@ Install kubectl using gcloud (we need __173.0.0__):
 
 [The 166.0.0 gcloud components only offer kubectl 172.0.0 - for this work the specific version of kubectl is more important.]
 
+Verify the current gcloud settings:
+
+	gcloud config list
+
+If necessary, configure default [region and zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones):
+
+	gcloud config set compute/region <region>
+	gcloud config set compute/zone <zone>
+
+If necessary, create project (for API reasons this is probably best done with the dashboard, but the command is shown below):
+
+	gcloud projects create k8snomad --name Nomad
+
+Set project as default:
+
+	gcloud config set project k8snomad
+
 Next: [Provision The Kubernetes Infrastructure](03-kubernetes-infrastructure.md)
