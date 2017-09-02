@@ -43,5 +43,5 @@ bash clean-up
 
 ## TODO
 
-- [ ] Verify with the latest version of Go (__1.8.4__ at time of writing)
+- [ ] Verify with the latest version of Go (__1.8.3__ at time of writing)
 - [ ] Verify with the latest version of Vault (__0.8.1__ at time of writing)
