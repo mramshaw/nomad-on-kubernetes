@@ -39,7 +39,7 @@ nomad  us-west1-b     1.7.3           XX.XXX.XXX.XX  n1-standard-1  1.7.3       
 
 ### Provision a Vault Node Pool
 
-Add an additional node pool to support running Vault on a dedicated set of machines. Running Vault under single tenancy is [recommended for production](https://www.vaultproject.io/guides/production.html).
+Add an additional node pool to support running Vault on a dedicated set of machines. Running Vault under single tenancy is recommended for production.
 
 ```
 gcloud container node-pools create vault-pool \
@@ -51,6 +51,11 @@ gcloud container node-pools create vault-pool \
 
 > Estimated time to completion: 2 minutes.
 
+Read up on other Vault guidelines here:
+
+	https://www.vaultproject.io/guides/production.html
+
+[Remember specifically to allow __ntp__. Many other useful suggestions as well.]
 List the node pools for the `nomad` Kubernetes cluster:
 
 ```
@@ -124,4 +129,4 @@ gcloud compute firewall-rules create default-allow-vault \
   --description "Allow vault from anywhere"
 ```
 
-Next: [Provision The Nomad Infrastructure](04-nomad-infrastructure.md)
+Next: [Provision the Nomad Infrastructure](04-nomad-infrastructure.md)

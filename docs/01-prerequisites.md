@@ -6,7 +6,7 @@ This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) t
 
 [Estimated cost](https://cloud.google.com/products/calculator/#id=1dc8801f-7903-432c-8eb3-f3b73b10be4d) to run this tutorial: $0.43 per hour ($10.31 per day).
 
-> The compute resources required for this tutorial exceed the Google Cloud Platform free tier.
+> As initially configured, the compute resources required for this tutorial exceed the Google Cloud Platform free tier. This version halves the compute resources used, allowing the use of the free tier - using the changes suggested by @steeef (Stephen Price).
 
 ## Source
 
