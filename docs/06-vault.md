@@ -4,7 +4,7 @@ Vault provides secrets management in a Nomad cluster and will be deployed as par
 
 ## Provision the Vault Servers
 
-Vault will be configured to store its state in the Consul cluster setup in the previous section. A StatefulSet is being used to ensure each Vault instance receives a stable DNS name and to provide stable storage for the local consul instance running as a side-car.
+Vault will be configured to store its state in the Consul cluster set up in the previous section. A StatefulSet is being used to ensure each Vault instance receives a stable DNS name and to provide stable storage for the local consul instance running as a side-car.
 
 Create the `vault` ConfigMap which holds the Vault server configuration:
 
@@ -18,7 +18,7 @@ Create the `vault` StatefulSet which will manage the Vault server and ensure it 
 kubectl apply -f statefulsets/vault.yaml
 ```
 
-> Only a single instance of Vault is being provisioned because Kubernetes will handle our HA requirements. If the Vault instances goes down it will be restarted. If the node hosting Vault goes down Kubernetes will reschedule Vault to another node in the node pool dedicated to Vault.
+> Only a single instance of Vault is being provisioned because Kubernetes will handle our HA requirements. If the Vault instance goes down it will be restarted. If the node hosting Vault goes down Kubernetes will reschedule Vault to another node in the node pool dedicated to Vault.
 
 It can take almost a minute before the `vault` cluster is ready. Use the `kubectl` command to monitor progress:
 
@@ -64,6 +64,8 @@ Check the current status of the Vault cluster:
 ```
 vault status
 ```
+
+Which should result in an error:
 
 ```
 Error checking seal status: Error making API request.
@@ -115,8 +117,9 @@ Key Threshold: 3
 Unseal Progress: 1
 Unseal Nonce: XXXXXXXX-XXXX-XXX-XXX-XXXXXXXXXXXX
 ```
+[Repeating a key does not affect progress (repeats are ignored).]
 
-Repeat the unseal command two more times. Once completed the `Sealed` status will be set to `false`:
+Repeat the unseal command two more times. Once completed the `Sealed` status will be set to `false` and the nonce will disappear:
 
 ```
 vault unseal
@@ -173,7 +176,7 @@ token_policies: [root]
 
 ## Create a Nomad Role Based Token
 
-Nomad has native [Vault integration](https://www.nomadproject.io/docs/vault-integration/index.html) which requires a role based Vault token.
+Nomad has native [Vault integration](https://www.nomadproject.io/docs/vault-integration/index.html) which requires a role-based Vault token.
 
 Create the `nomad-server` policy:
 
@@ -234,6 +237,6 @@ vault-token:    36 bytes
 
 The Vault cluster is now ready for use by the Nomad control plane.
 
-> Note: If the Vault server is ever restarted it must be [unsealed](#unseal-the-vault-instance).
+> Note: If the Vault server is ever restarted it must once more be [unsealed](#unseal-the-vault-instance) (as above).
 
-Next: [Provision The Nomad Servers](07-nomad.md)
+Next: [Provision the Nomad Servers](07-nomad.md)
