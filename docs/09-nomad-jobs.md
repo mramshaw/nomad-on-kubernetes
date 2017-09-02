@@ -154,7 +154,7 @@ XXXX/XX/XX XX:XX:XX current token value: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 XXXX/XX/XX XX:XX:XX current token value: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-The `token-printer` Job is set to run continuously and will automatically reload the Vault token from disk after receiving a `NOHUP` single from the local Nomad agent.
+The `token-printer` Job is set to run continuously and will automatically reload the Vault token from disk after receiving a `NOHUP` signal from the local Nomad agent.
 
 Stop and purge the `token-printer` Job:
 
