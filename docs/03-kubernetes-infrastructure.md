@@ -56,6 +56,7 @@ Read up on other Vault guidelines here:
 	https://www.vaultproject.io/guides/production.html
 
 [Remember specifically to allow __ntp__. Many other useful suggestions as well.]
+
 List the node pools for the `nomad` Kubernetes cluster:
 
 ```
