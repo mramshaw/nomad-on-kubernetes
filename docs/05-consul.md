@@ -62,4 +62,6 @@ data:
 EOF
 ```
 
-Next: [Provision The Vault Service](06-vault.md)
+[This generates a warning message, which can be ignored.]
+
+Next: [Provision the Vault Service](06-vault.md)
