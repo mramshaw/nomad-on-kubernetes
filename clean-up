@@ -9,7 +9,7 @@ kubectl delete persistentvolumeclaims \
   consul-data-vault-0 \
   nomad-data-nomad-0 nomad-data-nomad-1 nomad-data-nomad-2
 
-kubectl delete services consul consul-internal-load-balancer nomad vault
+kubectl delete services consul consul-dns consul-internal-load-balancer nomad vault
 
 kubectl delete configmaps consul nomad vault
 
