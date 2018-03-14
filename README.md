@@ -45,4 +45,4 @@ bash clean-up
 
 - [ ] Verify with the latest version of Go (__1.9__ at time of writing)
 - [ ] Verify with the latest version of Vault (__0.8.1__ at time of writing)
-- [ ] Verify with Vault configured "sudo setcap -rcap_ipc_lock=+ep $(readlink -f $(which vault))"
+- [ ] Verify with Vault configured "sudo setcap cap_ipc_lock=+ep $(readlink -f $(which vault))"
